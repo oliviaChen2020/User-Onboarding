@@ -1,11 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+// import React from 'react';
+import React, { useState } from 'react';
+// import logo from './logo.svg';
+import Form from './Form';
+import Team from './Team';
 import './App.css';
 
+
+
 function App() {
+  const [teamMembers, setTeamMembers] = useState([])
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
+      <h1>React Team Builder</h1>
+      <Form teamMembers = {teamMembers} setTeamMembers ={setTeamMembers} />
+      <Team teamMembers = {teamMembers}/>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,7 +30,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      
     </div>
   );
 }
